@@ -28,4 +28,10 @@ public class BarbarianTest {
         barbarian.weaponAttack(orc);
         assertEquals(4, orc.getHealthPoints());
     }
+
+    @Test
+    public void canSwapWeapon(){
+        barbarian.swapWeapon(Weapon.SWORD);
+        assertEquals(Weapon.SWORD, barbarian.getWeapon());
+    }
 }

@@ -1,4 +1,5 @@
 package player;
 
-public class Mage {
+public abstract class Mage extends Player {
+
 }
