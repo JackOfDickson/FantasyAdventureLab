@@ -24,4 +24,9 @@ public class Cleric extends Mage{
         useMana(spells.get(0).getManaCost());
         target.receiveHealing(spells.get(0).getHealValue());
     }
+
+    public void castCure(Player target){
+        useMana(spells.get(1).getManaCost());
+        target.receiveHealing(spells.get(1).getHealValue());
+    }
 }

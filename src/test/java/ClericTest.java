@@ -23,4 +23,12 @@ public class ClericTest {
         assertEquals(24, barbarian.getHealthPoints());
         assertEquals(16, cleric.getMana());
     }
+
+    @Test
+    public void canCure(){
+        cleric.castCure(barbarian);
+        assertEquals(26, barbarian.getHealthPoints());
+        assertEquals(12, cleric.getMana());
+    }
+
 }
