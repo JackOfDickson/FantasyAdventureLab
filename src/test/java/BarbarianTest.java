@@ -2,6 +2,7 @@ import enemies.Orc;
 import org.junit.Before;
 import org.junit.Test;
 import player.Barbarian;
+import weapons.Item;
 import weapons.Weapon;
 
 import static org.junit.Assert.assertEquals;
@@ -33,5 +34,11 @@ public class BarbarianTest {
     public void canSwapWeapon(){
         barbarian.swapWeapon(Weapon.SWORD);
         assertEquals(Weapon.SWORD, barbarian.getWeapon());
+    }
+
+    @Test
+    public void canAddItemToBackpack(){
+        barbarian.addItem(Item.HealthPotion);
+        assertEquals(1, barbarian.getBackpack().size());
     }
 }
