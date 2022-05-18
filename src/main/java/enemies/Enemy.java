@@ -5,11 +5,14 @@ import moves.ITakeDamage;
 public abstract class Enemy implements ITakeDamage {
 
     private int healthPoints;
-    private int strength;
 
-    public Enemy(int healthPoints, int strength) {
+
+    public Enemy(int healthPoints) {
         this.healthPoints = healthPoints;
-        this.strength = strength;
+    }
+
+    public int getHealthPoints() {
+        return healthPoints;
     }
 
     public void takeDamage(int attack){
