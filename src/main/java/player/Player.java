@@ -17,10 +17,14 @@ public abstract class Player implements ITakeDamage {
     }
 
     public int getHealthPoints() {
-        return healthPoints;
+        return this.healthPoints;
     }
 
     public void takeDamage(int attack){
+        healthPoints -= attack;
+    }
+    // in the event takeDamage is overriden use this to affect healthPoints
+    public void receiveDamage(int attack) {
         healthPoints -= attack;
     }
 }

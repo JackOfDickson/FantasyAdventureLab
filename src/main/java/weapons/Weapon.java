@@ -1,13 +1,17 @@
 package weapons;
 
-public class Weapon {
-    private int damage;
+public enum Weapon {
+    CLUB(4),
+    AXE(5),
+    SWORD(6);
 
-    public Weapon(int damage) {
-        this.damage = damage;
+    private int attackValue;
+
+    Weapon(int attackValue) {
+        this.attackValue = attackValue;
     }
 
-    public int getDamage() {
-        return damage;
+    public int getAttackValue() {
+        return attackValue;
     }
 }

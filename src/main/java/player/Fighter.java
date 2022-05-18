@@ -4,6 +4,7 @@ import enemies.Enemy;
 import moves.IWeapon;
 import weapons.Weapon;
 
+
 public abstract class Fighter extends Player implements IWeapon {
 
     private Weapon weapon;
@@ -13,7 +14,14 @@ public abstract class Fighter extends Player implements IWeapon {
         this.weapon = weapon;
     }
 
+    public Weapon getWeapon() {
+        return weapon;
+    }
+
     public void weaponAttack(Enemy target){
-        target.takeDamage(weapon.getDamage());
+        target.takeDamage(weapon.getAttackValue());
+    }
+    public void swapWeapon(Weapon newWeapon){
+        this.weapon = newWeapon;
     }
 }
