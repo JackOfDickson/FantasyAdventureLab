@@ -19,4 +19,5 @@ public class BarbarianTest {
         barbarian.takeDamage(5);
         assertEquals(15, barbarian.getHealthPoints());
     }
+    
 }
