@@ -41,4 +41,12 @@ public class BarbarianTest {
         barbarian.addItem(Item.HealthPotion);
         assertEquals(1, barbarian.getBackpack().size());
     }
+
+    @Test
+    public void canUsePotion(){
+        barbarian.addItem(Item.HealthPotion);
+        barbarian.useHealthPotion();
+        assertEquals(0, barbarian.getBackpack().size());
+        assertEquals(25, barbarian.getHealthPoints());
+    }
 }

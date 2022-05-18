@@ -47,5 +47,14 @@ public abstract class Player implements ITakeDamage {
         backpack.put(item, backpack.get(item)+1);
     }
 
+    public void useHealthPotion(){
+        if (backpack.containsKey(Item.HealthPotion)){
+            backpack.put(Item.HealthPotion, backpack.get(Item.HealthPotion) - 1);
+            receiveHealing(5);
+            if (backpack.get(Item.HealthPotion) == 0);
+            backpack.remove(Item.HealthPotion);
+        }
+    }
+
 
 }
