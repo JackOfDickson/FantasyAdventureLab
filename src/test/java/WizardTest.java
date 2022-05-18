@@ -22,4 +22,11 @@ public class WizardTest {
         assertEquals(5,orc.getHealthPoints());
         assertEquals(18, wizard.getMana());
     }
+
+    @Test
+    public void canCastLightningBlast(){
+        wizard.castLightningBlast(orc);
+        assertEquals(2,orc.getHealthPoints());
+        assertEquals(16, wizard.getMana());
+    }
 }
