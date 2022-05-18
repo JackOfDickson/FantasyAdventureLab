@@ -20,6 +20,10 @@ public abstract class Player implements ITakeDamage {
         return this.healthPoints;
     }
 
+    public void receiveHealing(int healAmount){
+        healthPoints += healAmount;
+    }
+
     public void takeDamage(int attack){
         healthPoints -= attack;
     }
